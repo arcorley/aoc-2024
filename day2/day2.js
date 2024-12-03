@@ -1,5 +1,4 @@
 const fs = require("node:fs");
-const { off } = require("node:process");
 const readline = require("node:readline");
 
 async function parseInput(filename) {
@@ -17,16 +16,6 @@ async function parseInput(filename) {
   }
 
   return nums;
-}
-
-function valChangeCheck(row) {
-  for (let i = 1; i < row.length; i++) {
-    let prev = row[i - 1];
-    let curr = row[i];
-
-    if (Math.abs(prev - curr) < 1 || Math.abs(prev - curr) > 3) {
-    }
-  }
 }
 
 function isSafe(row, depth) {
